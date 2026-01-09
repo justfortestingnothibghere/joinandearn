@@ -1,137 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CrimeZone | CrimeCity</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <!-- Primary SEO -->
+    <title>CrimeZone | CrimeCity - TeamDev India P2P Battle Telegram Bot</title>
+    <meta name="description" content="Join the ultimate CrimeZone & CrimeCity arena! P2P battles, Telegram bot, leaderboards, coins, golds, diamonds, kills & power ranking - TeamDev India exclusive gaming experience.">
+    <meta name="keywords" content="CrimeZone, CrimeCity, Teamdev, Teamdev India, Telegram Bot, Telegram Baka, Baka Bot, P2P Battle, Telegram game bot, Crime Zone Arena, Crime City game, battle bot, Telegram gaming, P2P gaming, hacking game bot, cyber crime game, teamdev baka, baka telegram, telegram bots, crimezone leaderboard, crimecity ranking">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="CrimeZone Pkayer Stats | Top 5 Players"/>
+    <meta property="og:description" content="Epic P2P battles in CrimeZone & CrimeCity Telegram bot by TeamDev India. Check leaderboards, stats, kills, power and more!"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://crimezone.teamdev.sbs/stats"/> <!-- ← Change to your real URL -->
+    <meta property="og:image" content="https://crimezone.teamdev.sbs/crimezone.jpg"/> <!-- Recommended: 1200×630 image -->
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="CrimeZone | CrimeCity - TeamDev P2P Battle"/>
+    <meta name="twitter:description" content="Telegram bot battle arena with coins, diamonds, kills & power ranking"/>
+    
+    <!-- Favicon (recommended to add) -->
+    <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon"> -->
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <style>
-        /* Futuristic Anime Theme CSS */
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            color: #fff;
+            color: #e0e0ff;
             font-family: 'Orbitron', sans-serif;
-            margin: 0;
-            padding: 0;
+            min-height: 100vh;
             overflow-x: hidden;
-            animation: glow 2s infinite alternate;
-        }
-
-        @keyframes glow {
-            0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00ffcc, 0 0 20px #00ffcc; }
-            100% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00ffcc, 0 0 40px #00ffcc; }
         }
 
         header {
             text-align: center;
-            padding: 40px 20px;
-            background: rgba(0, 0, 0, 0.7);
-            border-bottom: 2px solid #00ffcc;
-            box-shadow: 0 0 20px #00ffcc;
+            padding: 2.5rem 1rem 1.5rem;
+            background: rgba(0, 0, 0, 0.65);
+            border-bottom: 3px solid #00ffcc88;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 4px 25px #00ffcc33;
         }
 
         h1 {
             font-family: 'Press Start 2P', cursive;
-            font-size: 2.5em;
+            font-size: clamp(1.8rem, 5vw, 3.2rem);
             color: #00ffcc;
-            text-shadow: 0 0 10px #00ffcc;
+            text-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc66;
+            letter-spacing: 3px;
         }
 
         #search-container {
             text-align: center;
-            margin: 20px 0;
+            margin: 1.8rem 0 2.5rem;
         }
 
         #search-input {
-            width: 300px;
-            padding: 10px;
-            font-size: 1em;
-            border: 2px solid #00ffcc;
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            border-radius: 5px;
-            outline: none;
-            transition: box-shadow 0.3s;
+            width: min(90%, 420px);
+            padding: 14px 18px;
+            font-size: 1.1rem;
+            background: rgba(255,255,255,0.07);
+            border: 2px solid #00ffcc55;
+            color: white;
+            border-radius: 12px;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.3s ease;
         }
 
         #search-input:focus {
-            box-shadow: 0 0 15px #00ffcc;
+            outline: none;
+            border-color: #00ffcc;
+            box-shadow: 0 0 20px #00ffcc66;
+            background: rgba(255,255,255,0.12);
         }
 
         .player-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.6rem;
+            padding: 0 1.5rem 3rem;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
         .player-card {
-            background: rgba(0, 0, 0, 0.8);
-            border: 2px solid #00ffcc;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 20px #00ffcc;
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: pulse 1.5s infinite;
+            background: rgba(15, 12, 41, 0.82);
+            border: 2px solid #00ffcc44;
+            border-radius: 14px;
+            padding: 1.6rem;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 8px 32px #00ffcc22;
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+        .player-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(0,255,204,0.15),
+                transparent
+            );
+            transition: 0.7s;
+        }
+
+        .player-card:hover::before {
+            left: 100%;
         }
 
         .player-card:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 30px #00ffcc;
+            transform: translateY(-8px);
+            border-color: #00ffcc;
+            box-shadow: 0 20px 50px #00ffcc44;
         }
 
         .player-name {
-            font-size: 1.5em;
+            font-size: 1.7rem;
             color: #ff00ff;
-            text-shadow: 0 0 5px #ff00ff;
-            margin-bottom: 10px;
+            text-shadow: 0 0 12px #ff00ff88;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
         }
 
         .player-username {
-            font-size: 1.2em;
             color: #00ffcc;
-            margin-bottom: 15px;
+            font-size: 1.1rem;
+            margin-bottom: 1.3rem;
+            opacity: 0.9;
+        }
+
+        .premium-crown {
+            color: #ffd700;
+            font-size: 1.4rem;
+            margin-left: 8px;
+            filter: drop-shadow(0 0 6px #ffd700aa);
         }
 
         .stat {
-            margin: 5px 0;
-            font-size: 1em;
             display: flex;
             justify-content: space-between;
+            margin: 0.55rem 0;
+            font-size: 1.05rem;
         }
 
         .stat-label {
             color: #ffd700;
+            font-weight: 500;
         }
 
         .stat-value {
-            color: #fff;
+            color: #f0f0ff;
+            font-weight: 600;
         }
 
-        /* Anime-inspired elements */
+        /* Background anime effect */
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://source.unsplash.com/random/1920x1080/?anime,futuristic') no-repeat center center/cover;
-            opacity: 0.1;
-            z-index: -1;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1557683316-973673baf926?w=1920&q=60') center/cover no-repeat;
+            opacity: 0.07;
+            z-index: -2;
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>CrimeZone Arena</h1>
     </header>
@@ -140,123 +191,138 @@
         <input type="text" id="search-input" placeholder="Search by Name or Username...">
     </div>
 
-    <div class="player-grid" id="player-grid">
-        <!-- Player Cards will be here -->
-    </div>
+    <div class="player-grid" id="player-grid"></div>
 
     <script>
-        // Hardcoded 5 players data
         const players = [
             {
                 name: "Mr. D",
                 username: "@MR_ARMAN_08",
-                coins: 538860,
+                coins: "538,860",
                 golds: 50,
                 diamonds: 498,
                 kills: 5,
                 power: 20,
                 level: 45,
                 exp: "78/600",
-                kd: 1.25,
+                kd: "1.25",
                 deaths: 4,
-                premium: "👑"
+                premium: true
             },
             {
                 name: "OL FFH4X",
                 username: "@Sudipta209",
-                coins: 14255,
+                coins: "14,255",
                 golds: 40,
                 diamonds: 8,
                 kills: 7,
                 power: 20,
                 level: 50,
                 exp: "21/600",
-                kd: 7,
+                kd: "7.00",
                 deaths: 1,
-                premium: "No"
+                premium: false
             },
             {
                 name: "Lakhan Lakhnotra",
                 username: "@Lakhan_lakhnotra",
-                coins: 9703,
+                coins: "9,703",
                 golds: 97,
                 diamonds: 0,
                 kills: 5,
                 power: 1,
                 level: 2,
                 exp: "48/400",
-                kd: 1.67,
+                kd: "1.67",
                 deaths: 3,
-                premium: "No"
+                premium: false
             },
             {
                 name: "㊝ Ｇｏｋｕ",
                 username: "@otcoffix",
-                coins: 2301,
+                coins: "2,301",
                 golds: 1,
                 diamonds: 1,
                 kills: 0,
                 power: 10,
                 level: 1,
                 exp: "66/200",
-                kd: 0.00,
+                kd: "0.00",
                 deaths: 0,
-                premium: "No"
+                premium: false
             },
             {
                 name: "Paradox",
                 username: "Unknown",
-                coins: 3018,
+                coins: "3,018",
                 golds: 0,
                 diamonds: 0,
                 kills: 1,
                 power: 10,
                 level: 1,
-                exp: 0,
-                kd: 1,
+                exp: "0/200",
+                kd: "∞",
                 deaths: 0,
-                premium: "No"
+                premium: false
             }
         ];
 
-        // Function to render player cards
-        function renderPlayers(filteredPlayers) {
+        function createPlayerCard(player) {
+            const card = document.createElement('div');
+            card.className = 'player-card';
+
+            card.innerHTML = `
+                <div class="player-name">
+                    ${player.name}
+                    ${player.premium ? '<span class="premium-crown">👑</span>' : ''}
+                </div>
+                <div class="player-username">${player.username}</div>
+
+                <div class="stat"><span class="stat-label">Coins:</span><span class="stat-value">${player.coins}</span></div>
+                <div class="stat"><span class="stat-label">Golds:</span><span class="stat-value">${player.golds}</span></div>
+                <div class="stat"><span class="stat-label">Diamonds:</span><span class="stat-value">${player.diamonds}</span></div>
+                <div class="stat"><span class="stat-label">Kills:</span><span class="stat-value">${player.kills}</span></div>
+                <div class="stat"><span class="stat-label">Power:</span><span class="stat-value">${player.power}</span></div>
+                <div class="stat"><span class="stat-label">Level:</span><span class="stat-value">${player.level}</span></div>
+                <div class="stat"><span class="stat-label">EXP:</span><span class="stat-value">${player.exp}</span></div>
+                <div class="stat"><span class="stat-label">K/D:</span><span class="stat-value">${player.kd}</span></div>
+                <div class="stat"><span class="stat-label">Deaths:</span><span class="stat-value">${player.deaths}</span></div>
+            `;
+
+            return card;
+        }
+
+        function renderPlayers(filteredPlayers = players) {
             const grid = document.getElementById('player-grid');
-            grid.innerHTML = ''; // Clear existing cards
+            grid.innerHTML = '';
+
+            if (filteredPlayers.length === 0) {
+                grid.innerHTML = '<h2 style="text-align:center; grid-column:1/-1; padding:3rem; opacity:0.6;">No players found...</h2>';
+                return;
+            }
 
             filteredPlayers.forEach(player => {
-                const card = document.createElement('div');
-                card.classList.add('player-card');
-
-                card.innerHTML = `
-                    <div class="player-name">${player.name}</div>
-                    <div class="player-username">${player.username}</div>
-                    <div class="stat"><span class="stat-label">Coins:</span> <span class="stat-value">${player.coins}</span></div>
-                    <div class="stat"><span class="stat-label">Golds:</span> <span class="stat-value">${player.golds}</span></div>
-                    <div class="stat"><span class="stat-label">Diamonds:</span> <span class="stat-value">${player.diamonds}</span></div>
-                    <div class="stat"><span class="stat-label">Kills:</span> <span class="stat-value">${player.kills}</span></div>
-                    <div class="stat"><span class="stat-label">Power:</span> <span class="stat-value">${player.power}</span></div>
-                    <div class="stat"><span class="stat-label">Level:</span> <span class="stat-value">${player.level}</span></div>
-                    <div class="stat"><span class="stat-label">EXP:</span> <span class="stat-value">${player.exp}</span></div>
-                    <div class="stat"><span class="stat-label">K/D:</span> <span class="stat-value">${player.kd}</span></div>
-                    <div class="stat"><span class="stat-label">Deaths:</span> <span class="stat-value">${player.deaths}</span></div>
-                `;
-
-                grid.appendChild(card);
+                grid.appendChild(createPlayerCard(player));
             });
         }
 
         // Initial render
-        renderPlayers(players);
+        renderPlayers();
 
-        // Search functionality
-        const searchInput = document.getElementById('search-input');
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase();
-            const filtered = players.filter(player => 
-                player.name.toLowerCase().includes(query) || 
-                player.username.toLowerCase().includes(query)
+        // Live search
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            
+            if (!query) {
+                renderPlayers();
+                return;
+            }
+
+            const filtered = players.filter(p => 
+                p.name.toLowerCase().includes(query) || 
+                p.username.toLowerCase().includes(query)
             );
+
             renderPlayers(filtered);
         });
     </script>
