@@ -3,169 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join And Earn Telegram Bot | Earn Money by Joining Channels</title>
-    <meta name="description" content="Best Telegram Join and Earn Bot - Earn real money by joining channels and groups. Channel owners promote your channels easily. Start earning today with JoinAndEarn2Bot!">
-    <meta name="keywords" content="join and earn telegram bot, earn money telegram, telegram join earn, best earn money bot telegram, telegram earning bot, join channels earn money, promote telegram channel, JoinAndEarn2Bot, telegram money earning bot 2026">
-    <meta property="og:title" content="Join And Earn Telegram Bot - Earn Money Easily">
-    <meta property="og:description" content="Join channels & groups to earn cash. Owners promote channels for free exposure.">
-    <meta property="og:image" content="https://joinandearnbot.netlify.app/demon-slayer.jpg"> <!-- Replace with actual image URL -->
-    <meta property="og:url" content="https://joinandearnbot.netlify.app">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Kaushan+Script&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    
+    <title>Anime Futuristic Player Stats</title>
     <style>
-        :root {
-            --primary-red: #EE1C25;
-            --dark-black: #000000;
-            --green-accent: #46B077;
-            --wisteria-purple: #906eb4;
-            --text-light: #eeeeed;
-            --bg-dark: #1a0f1a;
-        }
-        
+        /* Futuristic Anime Theme CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap');
+
         body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
             margin: 0;
             padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://wallpapercave.com/wp/wp7116270.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: var(--text-light);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            overflow-x: hidden;
+            animation: glow 2s infinite alternate;
         }
-        
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00ffcc, 0 0 20px #00ffcc; }
+            100% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00ffcc, 0 0 40px #00ffcc; }
+        }
+
         header {
+            text-align: center;
             padding: 40px 20px;
-            max-width: 900px;
+            background: rgba(0, 0, 0, 0.7);
+            border-bottom: 2px solid #00ffcc;
+            box-shadow: 0 0 20px #00ffcc;
         }
-        
+
         h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 4.5rem;
-            color: var(--primary-red);
-            text-shadow: 0 0 15px #000, 3px 3px 0 #fff;
-            margin: 0;
-            letter-spacing: 4px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2.5em;
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
         }
-        
-        h2 {
-            font-family: 'Kaushan Script', cursive;
-            font-size: 2.5rem;
-            color: var(--green-accent);
+
+        #search-container {
+            text-align: center;
             margin: 20px 0;
         }
-        
-        p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            line-height: 1.6;
-            margin: 20px auto;
+
+        #search-input {
+            width: 300px;
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #00ffcc;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-radius: 5px;
+            outline: none;
+            transition: box-shadow 0.3s;
         }
-        
-        .btn {
-            display: inline-block;
-            margin: 30px 0;
-            padding: 18px 40px;
-            background: var(--primary-red);
-            color: white;
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-            transition: all 0.3s;
-            border: 3px solid var(--text-light);
+
+        #search-input:focus {
+            box-shadow: 0 0 15px #00ffcc;
         }
-        
-        .btn:hover {
+
+        .player-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .player-card {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ffcc;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px #00ffcc;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .player-card:hover {
             transform: scale(1.1);
-            background: #ff3b47;
-            box-shadow: 0 0 30px var(--primary-red);
+            box-shadow: 0 0 30px #00ffcc;
         }
-        
-        .features {
+
+        .player-name {
+            font-size: 1.5em;
+            color: #ff00ff;
+            text-shadow: 0 0 5px #ff00ff;
+            margin-bottom: 10px;
+        }
+
+        .player-username {
+            font-size: 1.2em;
+            color: #00ffcc;
+            margin-bottom: 15px;
+        }
+
+        .stat {
+            margin: 5px 0;
+            font-size: 1em;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            max-width: 1000px;
-            margin: 50px 0;
+            justify-content: space-between;
         }
-        
-        .feature-card {
-            background: rgba(0,0,0,0.6);
-            border: 2px solid var(--primary-red);
-            border-radius: 15px;
-            padding: 30px;
-            width: 350px;
-            box-shadow: 0 0 20px rgba(238,28,37,0.3);
-            transition: transform 0.3s;
+
+        .stat-label {
+            color: #ffd700;
         }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
+
+        .stat-value {
+            color: #fff;
         }
-        
-        .feature-card h3 {
-            font-family: 'Cinzel', serif;
-            color: var(--primary-red);
-            font-size: 1.8rem;
-        }
-        
-        footer {
-            margin-top: auto;
-            padding: 30px;
-            background: rgba(0,0,0,0.8);
+
+        /* Anime-inspired elements */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-        }
-        
-        footer a {
-            color: var(--green-accent);
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2rem;
-        }
-        
-        @media (max-width: 768px) {
-            h1 { font-size: 3rem; }
-            h2 { font-size: 2rem; }
-            .btn { font-size: 1.5rem; padding: 15px 30px; }
-            .features { flex-direction: column; align-items: center; }
+            height: 100%;
+            background: url('https://source.unsplash.com/random/1920x1080/?anime,futuristic') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: -1;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Join & Earn Bot</h1>
-        <h2>Slay Tasks, Earn Rewards!</h2>
-        <p>Earn real money by simply joining Telegram channels and groups. Channel/Group owners – promote your community and get more members fast!</p>
-        <a href="https://t.me/JoinAndEarn2Bot" class="btn">👉 Start Bot Now & Earn Money</a>
+        <h1>Anime Futuristic Player Arena</h1>
     </header>
-    
-    <section class="features">
-        <div class="feature-card">
-            <h3>For Users</h3>
-            <p>Join channels/groups through the bot and get paid for every successful join. Easy tasks, instant rewards – start earning today!</p>
-        </div>
-        <div class="feature-card">
-            <h3>For Owners</h3>
-            <p>Add your channel or group to the bot for promotion. Get real members joining your community without spending a fortune.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Why Us?</h3>
-            <p>Trusted & fast payouts | Thousands of channels | Best rates in 2026 | Secure Telegram bot</p>
-        </div>
-    </section>
-    
-    <footer>
-        <p><strong>Commands:</strong> /start - Begin earning | /help - Get help | /rules - View bot rules</p>
-        <p>Contact: <a href="https://t.me/yourusername">@yourusername</a> | Join Support Group: <a href="https://t.me/yourgroup">Support Group</a></p>
-        <p>© 2026 JoinAndEarn2Bot - Best Telegram Earn Money Bot</p>
-    </footer>
+
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Search by Name or Username...">
+    </div>
+
+    <div class="player-grid" id="player-grid">
+        <!-- Player Cards will be here -->
+    </div>
+
+    <script>
+        // Hardcoded 5 players data
+        const players = [
+            {
+                name: "Shadow Ninja",
+                username: "@shadowstrike",
+                coins: 1500,
+                golds: 200,
+                diamonds: 50,
+                kills: 300,
+                power: 85,
+                level: 45,
+                exp: 12000,
+                kd: 2.5,
+                deaths: 120
+            },
+            {
+                name: "Neon Samurai",
+                username: "@neonblade",
+                coins: 2200,
+                golds: 300,
+                diamonds: 80,
+                kills: 450,
+                power: 90,
+                level: 50,
+                exp: 15000,
+                kd: 3.0,
+                deaths: 150
+            },
+            {
+                name: "Cyber Witch",
+                username: "@cyberhex",
+                coins: 1800,
+                golds: 250,
+                diamonds: 60,
+                kills: 350,
+                power: 88,
+                level: 47,
+                exp: 13000,
+                kd: 2.8,
+                deaths: 125
+            },
+            {
+                name: "Plasma Warrior",
+                username: "@plasmablast",
+                coins: 2500,
+                golds: 400,
+                diamonds: 100,
+                kills: 500,
+                power: 95,
+                level: 55,
+                exp: 18000,
+                kd: 3.5,
+                deaths: 143
+            },
+            {
+                name: "Quantum Assassin",
+                username: "@quantumkill",
+                coins: 2000,
+                golds: 280,
+                diamonds: 70,
+                kills: 400,
+                power: 92,
+                level: 52,
+                exp: 16000,
+                kd: 3.2,
+                deaths: 125
+            }
+        ];
+
+        // Function to render player cards
+        function renderPlayers(filteredPlayers) {
+            const grid = document.getElementById('player-grid');
+            grid.innerHTML = ''; // Clear existing cards
+
+            filteredPlayers.forEach(player => {
+                const card = document.createElement('div');
+                card.classList.add('player-card');
+
+                card.innerHTML = `
+                    <div class="player-name">${player.name}</div>
+                    <div class="player-username">${player.username}</div>
+                    <div class="stat"><span class="stat-label">Coins:</span> <span class="stat-value">${player.coins}</span></div>
+                    <div class="stat"><span class="stat-label">Golds:</span> <span class="stat-value">${player.golds}</span></div>
+                    <div class="stat"><span class="stat-label">Diamonds:</span> <span class="stat-value">${player.diamonds}</span></div>
+                    <div class="stat"><span class="stat-label">Kills:</span> <span class="stat-value">${player.kills}</span></div>
+                    <div class="stat"><span class="stat-label">Power:</span> <span class="stat-value">${player.power}</span></div>
+                    <div class="stat"><span class="stat-label">Level:</span> <span class="stat-value">${player.level}</span></div>
+                    <div class="stat"><span class="stat-label">EXP:</span> <span class="stat-value">${player.exp}</span></div>
+                    <div class="stat"><span class="stat-label">K/D:</span> <span class="stat-value">${player.kd}</span></div>
+                    <div class="stat"><span class="stat-label">Deaths:</span> <span class="stat-value">${player.deaths}</span></div>
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
+        // Initial render
+        renderPlayers(players);
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const filtered = players.filter(player => 
+                player.name.toLowerCase().includes(query) || 
+                player.username.toLowerCase().includes(query)
+            );
+            renderPlayers(filtered);
+        });
+    </script>
 </body>
 </html>
